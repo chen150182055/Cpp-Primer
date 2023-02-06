@@ -6,15 +6,13 @@
 #include <iostream>
 #include <string>
 
-void swap(int*& lft, int*& rht)
-{
+void swap(int *&lft, int *&rht) {
     auto tmp = lft;
     lft = rht;
     rht = tmp;
 }
 
-int main()
-{
+int main() {
     int i = 42, j = 99;
     auto lft = &i;
     auto rht = &j;

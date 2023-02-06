@@ -4,24 +4,20 @@
 
 // Test reference to http://coolshell.cn/articles/10478.html
 
-void foo(String x)
-{
+void foo(String x) {
     std::cout << x.c_str() << std::endl;
 }
 
-void bar(const String& x)
-{
+void bar(const String &x) {
     std::cout << x.c_str() << std::endl;
 }
 
-String baz()
-{
+String baz() {
     String ret("world");
     return ret;
 }
 
-int main()
-{
+int main() {
     char text[] = "world";
 
     String s0;
@@ -48,7 +44,7 @@ int main()
     svec.push_back(baz());
     svec.push_back("good job");
 
-    for (const auto &s : svec) {
+    for (const auto &s: svec) {
         std::cout << s.c_str() << std::endl;
     }
 }

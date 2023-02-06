@@ -12,10 +12,10 @@
 #include <string>
 #include <memory>
 
-using std::string; using std::unique_ptr;
+using std::string;
+using std::unique_ptr;
 
-int main()
-{
+int main() {
     unique_ptr<string> p1(new string("pezy"));
     // unique_ptr<string> p2(p1); // copy
     //                      ^

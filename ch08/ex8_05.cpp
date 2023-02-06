@@ -12,24 +12,25 @@
 #include <vector>
 #include <iostream>
 
-using std::vector; using std::string; using std::ifstream; using std::cout; using std::endl;
+using std::vector;
+using std::string;
+using std::ifstream;
+using std::cout;
+using std::endl;
 
-void ReadFileToVec(const string& fileName, vector<string>& vec)
-{
+void ReadFileToVec(const string &fileName, vector<string> &vec) {
     ifstream ifs(fileName);
-    if (ifs)
-    {
+    if (ifs) {
         string buf;
-        while (ifs >> buf)
+        while (ifs >> buf)      //这里就不是输出每行了
             vec.push_back(buf);
     }
 }
 
-int main()
-{
+int main() {
     vector<string> vec;
-    ReadFileToVec("../data/book.txt", vec);
-    for (const auto &str : vec)
+    ReadFileToVec("../../data/book.txt", vec);
+    for (const auto &str: vec)
         cout << str << endl;
     return 0;
 }

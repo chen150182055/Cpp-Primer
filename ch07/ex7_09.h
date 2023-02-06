@@ -14,11 +14,11 @@
 #include <string>
 #include <iostream>
 
-struct Person 
-{
-    std::string const& getName()    const { return name; }
-    std::string const& getAddress() const { return address; }
-    
+struct Person {
+    std::string const &getName() const { return name; }
+
+    std::string const &getAddress() const { return address; }
+
     std::string name;
     std::string address;
 };

@@ -9,10 +9,10 @@
 
 #include <iostream>
 #include <sstream>
+
 using std::istream;
 
-istream& func(istream &is)
-{
+istream &func(istream &is) {
     std::string buf;
     while (is >> buf)
         std::cout << buf << std::endl;
@@ -20,8 +20,7 @@ istream& func(istream &is)
     return is;
 }
 
-int main()
-{
+int main() {
     std::istringstream iss("hello");
     func(iss);
     return 0;

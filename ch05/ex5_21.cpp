@@ -4,18 +4,20 @@
 //  @frank67 Rewrite using the 'continue' statement. See #250
 
 #include <iostream>
-using std::cin; using std::cout; using std::endl;
+
+using std::cin;
+using std::cout;
+using std::endl;
+
 #include <string>
+
 using std::string;
 
-int main()
-{
+int main() {
     string curr, prev;
     bool no_twice = true;
-    while (cin >> curr) 
-    {
-        if (isupper(curr[0]) && prev == curr)
-        {
+    while (cin >> curr) {
+        if (isupper(curr[0]) && prev == curr) {
             cout << curr << ": occurs twice in succession." << endl;
             no_twice = false;
             break;

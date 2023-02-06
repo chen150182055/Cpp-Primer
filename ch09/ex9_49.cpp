@@ -17,16 +17,17 @@
 #include <fstream>
 #include <iostream>
 
-using std::string; using std::cout; using std::endl; using std::ifstream;
+using std::string;
+using std::cout;
+using std::endl;
+using std::ifstream;
 
-int main()
-{
+int main() {
     ifstream ifs("../data/letter.txt");
     if (!ifs) return -1;
 
     string longest;
-    auto update_with = [&longest](string const& curr)
-    {
+    auto update_with = [&longest](string const &curr) {
         if (string::npos == curr.find_first_not_of("aceimnorsuvwxz"))
             longest = longest.size() < curr.size() ? curr : longest;
     };

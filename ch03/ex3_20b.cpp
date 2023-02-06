@@ -6,13 +6,11 @@ using std::cout;
 using std::endl;
 using std::cin;
 
-int main()
-{
+int main() {
     vector<int> ivec;
     for (int i; cin >> i; ivec.push_back(i));
 
-    if (ivec.empty())
-    {
+    if (ivec.empty()) {
         cout << "input at least one integer." << endl;
         return -1;
     }

@@ -16,13 +16,12 @@
 
 #include <string>
 
-class Person 
-{
+class Person {
     std::string name;
     std::string address;
 public:
-    auto get_name() const -> std::string const& { return name; }    //返回姓名
-    auto get_addr() const -> std::string const& { return address; } //返回住址
+    auto get_name() const -> std::string const & { return name; }    //返回姓名
+    auto get_addr() const -> std::string const & { return address; } //返回住址
 };
 
 #endif

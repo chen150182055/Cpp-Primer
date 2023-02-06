@@ -12,28 +12,28 @@
 #include <iostream>
 
 struct Person;
-std::istream &read(std::istream&, Person&);
+
+std::istream &read(std::istream &, Person &);
 
 struct Person {
     Person() = default;     //添加默认的构造函数
-    Person(const std::string sname, const std::string saddr):name(sname), address(saddr){ } //添加有两个参数的构造函数
-    Person(std::istream &is){ read(is, *this); }    //添加函数体不为空的构造函数
-    
+    Person(const std::string sname, const std::string saddr) : name(sname), address(saddr) {} //添加有两个参数的构造函数
+    Person(std::istream &is) { read(is, *this); }    //添加函数体不为空的构造函数
+
     std::string getName() const { return name; }
+
     std::string getAddress() const { return address; }
-    
+
     std::string name;
     std::string address;
 };
 
-std::istream &read(std::istream &is, Person &person)
-{
+std::istream &read(std::istream &is, Person &person) {
     is >> person.name >> person.address;
     return is;
 }
 
-std::ostream &print(std::ostream &os, const Person &person)
-{
+std::ostream &print(std::ostream &os, const Person &person) {
     os << person.name << " " << person.address;
     return os;
 }

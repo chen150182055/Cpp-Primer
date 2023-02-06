@@ -1,18 +1,19 @@
 #include <iostream>
-using std::cout; using std::endl;
 
-int main()
-{
-    int arr[3][4] = 
-    { 
-        { 0, 1, 2, 3 },
-        { 4, 5, 6, 7 },
-        { 8, 9, 10, 11 }
-    };
+using std::cout;
+using std::endl;
+
+int main() {
+    int arr[3][4] =
+            {
+                    {0, 1, 2,  3},
+                    {4, 5, 6,  7},
+                    {8, 9, 10, 11}
+            };
 
     // range for
-    for (const int(&row)[4] : arr)
-        for (int col : row) cout << col << " ";
+    for (const int(&row)[4]: arr)
+        for (int col: row) cout << col << " ";
     cout << endl;
 
     // for loop

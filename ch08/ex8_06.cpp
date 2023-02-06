@@ -15,32 +15,30 @@
 #include <iostream>
 
 #include "../ch07/ex7_26.h"
-using std::ifstream; using std::cout; using std::endl; using std::cerr;
 
-int main(int argc, char **argv)
-{
+using std::ifstream;
+using std::cout;
+using std::endl;
+using std::cerr;
+
+int main(int argc, char **argv) {
     ifstream input(argv[1]);
-    
+
     Sales_data total;
-    if (read(input, total))
-    {
+    if (read(input, total)) {
         Sales_data trans;
-        while (read(input, trans))
-        {
+        while (read(input, trans)) {
             if (total.isbn() == trans.isbn())
                 total.combine(trans);
-            else
-            {
+            else {
                 print(cout, total) << endl;
                 total = trans;
             }
         }
         print(cout, total) << endl;
-    }
-    else
-    {
+    } else {
         cerr << "No data?!" << endl;
     }
-    
+
     return 0;
 }

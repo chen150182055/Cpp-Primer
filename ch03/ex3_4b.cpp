@@ -8,10 +8,8 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int main()
-{
-    for (string str1, str2; cin >> str1 >> str2;/* */)
-    {
+int main() {
+    for (string str1, str2; cin >> str1 >> str2;/* */) {
         if (str1.size() == str2.size())
             cout << "The two strings have the same length." << endl;
         else

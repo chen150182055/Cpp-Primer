@@ -5,10 +5,10 @@
 //if mem1 is a string. What if mem1 is an int?
 //Explain how name lookup works in both cases.
 
-void swap(T v1,Tv2)
+void swap(T v1,T v2)
 {
     using std::swap;
-    swap(vq.mem1,v2.mem1);
+    swap(v1.mem1,v2.mem1);
     //swap remaining members of type T
 }
 

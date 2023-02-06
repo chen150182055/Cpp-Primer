@@ -7,11 +7,9 @@
 
 #include "ex7_12.h"
 
-int main()
-{
+int main() {
     Sales_data total(std::cin);    //调用第一个只有一个参数的构造函数初始化对象
-    if (!total.isbn().empty())
-    {
+    if (!total.isbn().empty()) {
         std::istream &is = std::cin;
         while (is) {
             Sales_data trans(is);
@@ -24,12 +22,10 @@ int main()
             }
         }
         print(std::cout, total) << std::endl;
-    }
-    else
-    {
+    } else {
         std::cerr << "No data?!" << std::endl;
         return -1;
     }
-    
+
     return 0;
 }

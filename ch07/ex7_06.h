@@ -39,7 +39,7 @@ std::istream &read(std::istream &is, Sales_data &item)  //自己版本的read,�
 
 std::ostream &print(std::ostream &os, const Sales_data &item)   //自己版本的print,函数名前的“&”是指返回引用类型
 {                                                               //将print的Sales_data参数定义为对const的引用，
-                                                                // 因为它并不打算改变这个对象的任何成员的值。
+    // 因为它并不打算改变这个对象的任何成员的值。
     os << item.isbn() << " " << item.units_sold << " " << item.revenue;
     return os;
 }

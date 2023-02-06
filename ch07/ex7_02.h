@@ -12,14 +12,14 @@
 
 struct Sales_data {
     std::string isbn() const { return bookNo; };    //添加isbn成员
-    Sales_data& combine(const Sales_data&);     //添加combine成员
-    
+    Sales_data &combine(const Sales_data &);     //添加combine成员
+
     std::string bookNo;
     unsigned units_sold = 0;
     double revenue = 0.0;
 };
 
-Sales_data& Sales_data::combine(const Sales_data& rhs)      //定义
+Sales_data &Sales_data::combine(const Sales_data &rhs)      //定义
 {
     units_sold += rhs.units_sold;
     revenue += rhs.revenue;

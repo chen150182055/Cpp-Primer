@@ -22,8 +22,7 @@ using std::string;
 class QueryResult
 {
     friend ostream& print(ostream&, const QueryResult&);
-	friend ostream& print(ostream&, const QueryResult&, 
-		size_t, size_t);
+	friend ostream& print(ostream&, const QueryResult&,size_t, size_t);
 public:
 	QueryResult(string s,
 		shared_ptr<set<TextQuery::line_no>> l,

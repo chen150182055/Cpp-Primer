@@ -8,8 +8,7 @@
 //  Tested on Windows 8.1 + Vs 2013
 //
 
-int main(void)
-{
+int main(void) {
     int i, j;
     std::cin >> i >> j;
     if (j == 0)

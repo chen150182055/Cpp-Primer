@@ -7,8 +7,7 @@
 
 #include "ex7_06.h"
 
-int main()
-{
+int main() {
     Sales_data total;
     if (read(std::cin, total))      //使用新函数read
     {
@@ -22,12 +21,10 @@ int main()
             }
         }
         print(std::cout, total) << std::endl;
-    }
-    else
-    {
+    } else {
         std::cerr << "No data?!" << std::endl;
         return -1;
     }
-    
+
     return 0;
 }

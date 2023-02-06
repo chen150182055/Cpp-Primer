@@ -11,7 +11,7 @@
 class Y;
 
 class X {
-    Y* y = nullptr;
+    Y *y = nullptr;
 };
 
 class Y {

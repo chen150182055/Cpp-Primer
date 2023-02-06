@@ -1,7 +1,7 @@
 add_executable(ex8_02 ex8_02.cpp)
 add_executable(ex8_04 ex8_04.cpp)
 add_executable(ex8_05 ex8_05.cpp)
-add_executable(ex8_06 ex8_06.cpp)
+add_executable(ex8_06 ex8_06.cpp ../ch07/ex7_26.cpp)
 add_executable(ex8_07 ex8_07.cpp)
 add_executable(ex8_08 ex8_08.cpp)
 add_executable(ex8_09 ex8_09.cpp)

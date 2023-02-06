@@ -13,15 +13,17 @@
 class Account {
 public:
     void calculate() { amount += amount * interestRate; }
+
     static double rate() { return interestRate; }
+
     static void rate(double newRate) { interestRate = newRate; }
-    
+
 private:
     std::string owner;
     double amount;
-    static double interestRate;
-    static constexpr double todayRate = 42.42;
-    static double initRate() { return todayRate; }
+    static double interestRate;         //静态成员变量
+    static constexpr double todayRate = 42.42;  //静态成员变量
+    static double initRate() { return todayRate; }  //静态成员函数
 };
 
 double Account::interestRate = initRate();

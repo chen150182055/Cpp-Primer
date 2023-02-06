@@ -12,11 +12,12 @@
 #include <iostream>
 #include <vector>
 
-using std::vector; using std::cout; using std::endl;
+using std::vector;
+using std::cout;
+using std::endl;
 
-int main()
-{
-    vector<int> v{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int main() {
+    vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9};
     auto begin = v.begin();
     while (begin != v.end()) {
         ++begin;
@@ -24,7 +25,7 @@ int main()
         ++begin;
     }
 
-    for (auto i : v)
+    for (auto i: v)
         cout << i << " ";
 
     return 0;
